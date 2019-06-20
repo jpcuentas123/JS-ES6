@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+    "use strict";
+        /*window.addEventListener("load",()=>{
+            alert("Hola mundo");
+        });*/
+        window.addEventListener("load",()=>document.getElementById("div_retorno_implicito").innerHTML=`<p>Retorno implicito</p>`);//Retorno implicito en las Arrow functions
+        
+        
+        //let objeto={nombre:'Jorge',funcion:function(){setTimeout(()=>document.getElementById("div_acceso_this").innerHTML=`${this.nombre} esta Programando`)}};//Acceso al contexto this dentro de la funcion donde se encuentran alojadas.
+        //objeto.funcion();
+               
+           /* let Mostrar_apellido=()=>{//This. Es creado por funcion y una () => {} no tiene alguna propia y 
+                state={
+                    alertar:()=>{
+                       this.nombre="JOrge"; document.getElementById("div_acceso_this").innerHTML=this.nombre},
+                    nombre:"Fabian",
+                    Apellido:"Cabarcas"                    
+                    }
+                    state.alertar();                    
+                }     
+            Mostrar_apellido();                    
+            */                           
+            function Estado_This(){                
+                var state_2={
+                    nombre:"Jose"
+                }                                     
+                function mostrar(){console.log(state_2.nombre)}
+                mostrar();                
+            }
+            Estado_This();
+    
+    </script>
+    <div id="div_retorno_implicito"></div>
+    <div id="div_acceso_this"></div>
+</body>
+</html>

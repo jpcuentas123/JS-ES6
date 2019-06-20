@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constantes</title>
+</head>
+<body>
+    <script>
+        const objeto={nombre:"Jorge"};
+        
+        const nuevoObjeto= Object.freeze(objeto);//Evita que la constante sea modificada
+
+        objeto.apellido="Perez";//De esta manera se podría modificar
+
+        console.log(objeto);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template literals o Literales de texto</title>
+</head>
+<body>
+    <script>
+        setTimeout(()=>{
+            var state={
+                nombre:"jorge",
+                documento:function(){document.getElementById("header").innerHTML=`
+                    <h1>Template Literals</h1>
+                    <br/>
+                    <h2>Mi nobre es ${this.nombre}</h2>
+                `} 
+                }
+                state.documento();
+        })
+    </script>
+    <header id="header">
+
+    </header>
+</body>
+</html>
